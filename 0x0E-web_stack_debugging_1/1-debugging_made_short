@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # debugging and Configures a Nginx server to listen on port 80
-
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
-service nginx stop
+sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+service nginx restart
+truncate -s 0 /run/nginx.pid
