@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Debugginf and Configures a Nginx server to listen on port 80
+# debugging and Configures a Nginx server to listen on port 80
 
 sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 sudo service nginx restart
